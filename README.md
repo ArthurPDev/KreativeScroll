@@ -14,11 +14,14 @@ Vous pouvez ajouter Kreative Scroll à votre projet en utilisant le lien CDN sui
 - Kreative Scroll 
 <script src="https://cdn.jsdelivr.net/gh/ArthurPDev/KreativeScroll@main/kreativescroll.js"></script>
 
+
 - Kreative Text 
 <script src="https://cdn.jsdelivr.net/gh/ArthurPDev/KreativeScroll@v1.0.0/kreativetexte.js"></script>
 
+
 - Kreative Smooth 
 <script src="https://cdn.jsdelivr.net/gh/ArthurPDev/KreativeScroll@main/kreativesmooth.js"></script>
+
 
 
 ## Documentation et exemples
