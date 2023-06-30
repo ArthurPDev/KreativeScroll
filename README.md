@@ -31,7 +31,7 @@ For more information on using Kreative Scroll and to see examples in action, vis
 
 ## Support
 
-If you encounter any problems with Kreative Scroll or have any questions, please contact us at info@kreativescroll.org.
+If you encounter any problems with Kreative Scroll or have any questions, please contact us at kreativescroll@protonmail.com.
 
 
 ## Support Kreative Scroll
