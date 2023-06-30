@@ -1,15 +1,15 @@
 # Kreative Scroll
 
-Kreative Scroll est une bibliothèque d'animation de défilement développée par Arthur Poulain et Mélusine Doëgle. Elle est conçue pour être facile à utiliser et offre une série d'animations de défilement de texte et d'objets configurables pour rendre vos sites web plus dynamiques et attrayants.
+Kreative Scroll is a scrolling animation library developed by Arthur Poulain and Mélusine Doëgle. It's designed to be easy to use and offers a series of configurable text and object scrolling animations to make your websites more dynamic and attractive.
 
-## Auteurs
+## Authors
 
 - Arthur Poulain
 - Mélusine Doëgle
 
 ## Installation
 
-Vous pouvez ajouter Kreative Scroll à votre projet en utilisant le lien CDN suivant :
+You can add Kreative Scroll to your project using the following CDN link:
 
 - Kreative Scroll 
 <script src="https://cdn.jsdelivr.net/gh/ArthurPDev/KreativeScroll@main/kreativescroll.js"></script>
@@ -24,25 +24,25 @@ Vous pouvez ajouter Kreative Scroll à votre projet en utilisant le lien CDN sui
 
 
 
-## Documentation et exemples
+## Documentation and examples
 
-Pour plus d'informations sur l'utilisation de Kreative Scroll et pour voir des exemples en action, consultez notre site web kreativescroll.org.
+For more information on using Kreative Scroll and to see examples in action, visit our website kreativescroll.org.
 
 
 ## Support
 
-Si vous rencontrez des problèmes avec Kreative Scroll ou si vous avez des questions, veuillez nous contacter à info@kreativescroll.org.
+If you encounter any problems with Kreative Scroll or have any questions, please contact us at info@kreativescroll.org.
 
 
-## Soutenir Kreative Scroll
+## Support Kreative Scroll
 
-Nous avons créé Kreative Scroll par passion et dans l'espoir qu'il puisse aider d'autres développeurs à créer de belles animations. Si vous trouvez notre travail utile et que vous voulez nous montrer votre appréciation, nous serions ravis si vous envisagiez de nous soutenir.
+We created Kreative Scroll out of passion and in the hope that it might help other developers create beautiful animations. If you find our work useful and would like to show your appreciation, we'd be delighted if you'd consider supporting us.
 
-Votre soutien nous aide à maintenir le projet, à corriger les bugs, et à développer de nouvelles fonctionnalités. Chaque tasse de café compte!
+Your support helps us maintain the project, fix bugs, and develop new features. Every cup of coffee counts!
 
-Si vous souhaitez nous soutenir, vous pouvez le faire à buymeacoffee.com/kreativescroll. Merci pour votre soutien et votre générosité, cela signifie beaucoup pour nous!
+If you'd like to support us, you can do so at buymeacoffee.com/kreativescroll. Thank you for your support and generosity, it means a lot to us!
 
 
-## Licence
+## License
 
-Kreative Scroll, Text et Smooth sont libre d'utilisation pour les projets commerciaux et non commerciaux. Si vous redistribuez le code, veuillez inclure une référence à ce dépôt GitHub et aux auteurs.
+Kreative Scroll, Text and Smooth are free to use for commercial and non-commercial projects. If you redistribute the code, please include a reference to this GitHub repository and the authors.
