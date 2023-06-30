@@ -5,13 +5,17 @@ class AnimationScroll {
     this.lastScrollPosition = window.scrollY;
     this.applyBorderRadius = this.config.applyBorderRadius === true;
     this.colorEffect = this.config.colorEffect === true;
-    this.hover = this.config.hover === true; // Ajout du paramètre hover
+    this.hover = this.config.hover === true; 
+    this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent); // Ajout pour la détection de mobile
     this.init();
   }
 
 
 
   init() {
+    const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+    if (isMobile && this.hover) return; // Ne fait rien sur mobile si hover est true
+    
     if (this.config.onLoad) {
       window.addEventListener("load", () => {
         this.elements.forEach((element, index) => {
@@ -44,20 +48,20 @@ class AnimationScroll {
     const animateOnScroll = () => {
       const scrollDirection = window.scrollY > this.lastScrollPosition ? "down" : "up";
       this.lastScrollPosition = window.scrollY;
-    
+  
       this.elements.forEach((element, index) => {
         const positionElement = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         const triggerPosition = windowHeight * (1 - this.config.trigger);
-    
+  
         if (positionElement < triggerPosition) {
           const scrollProgress = Math.min(1, 1 - (positionElement / triggerPosition));
           const delay = (this.config.delay || 0) * index;
-    
+  
           if (element.getAttribute("data-initialized") === "false") {
             element.setAttribute("data-initialized", "true");
           }
-    
+  
           if (this.config.pauseOnScroll) {
             this.applyAnimation(element, scrollProgress, scrollDirection);
           } else {
@@ -77,13 +81,11 @@ class AnimationScroll {
           }
         }
       });
-    
+  
       requestAnimationFrame(animateOnScroll);
     };
-    
-    
   
-    if (this.hover) { // Ajout de la condition pour gérer le hover
+    if (this.hover) {
       this.elements.forEach((element) => {
         element.addEventListener('mouseenter', () => {
           this.animateElement(element, 1, 'down');
@@ -97,6 +99,8 @@ class AnimationScroll {
       requestAnimationFrame(animateOnScroll);
     }
   }
+  
+  
   
 
 
