@@ -127,5 +127,5 @@ class SmoothScroll {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const smoothScroll = new SmoothScroll(0.01);
+  const smoothScroll = new SmoothScroll(0.019);
 });
