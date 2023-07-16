@@ -40,7 +40,7 @@ We created Kreative Scroll out of passion and in the hope that it might help oth
 
 Your support helps us maintain the project, fix bugs, and develop new features. Every cup of coffee counts!
 
-If you'd like to support us, you can do so at buymeacoffee.com/kreativescroll. Thank you for your support and generosity, it means a lot to us!
+If you'd like to support us, you can do so at https://www.buymeacoffee.com/kreativescroll. Thank you for your support and generosity, it means a lot to us!
 
 
 ## License
