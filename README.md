@@ -26,7 +26,7 @@ You can add Kreative Scroll to your project using the following CDN link:
 
 ## Documentation and examples
 
-For more information on using Kreative Scroll and to see examples in action, visit our website kreative-scroll.eu.
+For more information on using Kreative Scroll and to see examples in action, visit our website [kreative-scroll.eu](https://kreative-scroll.eu/).
 
 
 ## Support
