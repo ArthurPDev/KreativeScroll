@@ -11,16 +11,19 @@ Kreative Scroll is a scrolling animation library developed by Arthur Poulain and
 
 You can add Kreative Scroll to your project using the following CDN link:
 
-- Kreative Scroll 
- <script src="https://tinyurl.com/KreativeScroll"></script>
+- Kreative Scroll
+
+```<script src="https://tinyurl.com/KreativeScroll"></script>```
 
 
-- Kreative Text 
- <script src="https://tinyurl.com/KreativeText"></script>
+- Kreative Text
+
+```<script src="https://tinyurl.com/KreativeText"></script>```
 
 
-- Kreative Smooth 
- <script src="https://tinyurl.com/KreativeSmoothScroll"></script>
+- Kreative Smooth
+
+```<script src="https://tinyurl.com/KreativeSmoothScroll"></script>```
 
 
 
