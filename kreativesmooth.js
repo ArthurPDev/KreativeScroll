@@ -3,12 +3,15 @@ class SmoothScroll {
     const isMobileOrIpad = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || /MacIntel/.test(window.navigator.platform) && navigator.maxTouchPoints > 1;
 
     if (isMobileOrIpad) return;
-    
+
 
     this.smoothness = smoothness || 0.08;
     this.currentScrollPosition = window.pageYOffset;
     this.targetScrollPosition = this.currentScrollPosition;
     this.enableScroll = true;
+
+    // Ajouter une nouvelle propriété pour suivre si l'utilisateur est en train de faire défiler la barre
+    this.isScrollingScrollbar = false;
 
     this.onWheel = this.onWheel.bind(this);
     this.animateScroll = this.animateScroll.bind(this);
@@ -25,14 +28,12 @@ class SmoothScroll {
     selectElements.forEach(selectElement => {
         selectElement.addEventListener('change', this.onSelectChange.bind(this));
     });
-}
-
+  }
 
   lerp(start, end, t) {
     return start * (1 - t) + end * t;
   }
 
-  // Ajouter cette nouvelle méthode à la classe
   onAnchorClick(e) {
     const target = e.target;
     if (target.tagName.toLowerCase() === 'a') {
@@ -47,7 +48,6 @@ class SmoothScroll {
     }
   }
 
-  // Ajouter cette nouvelle méthode à la classe
   onSelectChange(e) {
     const target = e.target;
     if (target.tagName.toLowerCase() === 'select') {
@@ -58,12 +58,8 @@ class SmoothScroll {
         window.location.hash = selectedOptionValue;  // Update the hash
       }
     }
-}
+  }
 
-
-
-
-  // Ajouter cette méthode pour obtenir la position de l'élément
   getOffsetTop(element) {
     let offsetTop = element.offsetTop;
     let currentElement = element;
@@ -74,9 +70,8 @@ class SmoothScroll {
     return offsetTop;
   }
 
-
   onWheel(e) {
-    if (!this.enableScroll) return;
+    if (!this.enableScroll || this.isScrollingScrollbar) return;
 
     e.preventDefault();
     const deltaY = e.deltaY * 1.5;
@@ -93,8 +88,10 @@ class SmoothScroll {
   }
 
   animateScroll() {
-    this.currentScrollPosition = this.lerp(this.currentScrollPosition, this.targetScrollPosition, this.smoothness);
-    window.scrollTo(0, this.clampScrollPosition(this.currentScrollPosition));
+    if (!this.isScrollingScrollbar) {
+      this.currentScrollPosition = this.lerp(this.currentScrollPosition, this.targetScrollPosition, this.smoothness);
+      window.scrollTo(0, this.clampScrollPosition(this.currentScrollPosition));
+    }
     requestAnimationFrame(this.animateScroll);
   }
 
@@ -114,12 +111,21 @@ class SmoothScroll {
   }
 
   onMouseDown(e) {
+    // Vérifier si l'utilisateur clique sur la barre de défilement
+    this.isScrollingScrollbar = (e.clientX > document.documentElement.clientWidth - 20);
     if (e.button === 1) {
       this.enableScroll = false;
     }
   }
 
   onMouseUp(e) {
+    if (this.isScrollingScrollbar) {
+      // Mettre à jour la position cible du scroll à la position actuelle de la page
+      this.targetScrollPosition = window.pageYOffset;
+      this.currentScrollPosition = window.pageYOffset;
+    }
+    // L'utilisateur n'est plus en train de faire défiler la barre
+    this.isScrollingScrollbar = false;
     if (e.button === 1) {
       this.enableScroll = true;
     }
@@ -127,5 +133,5 @@ class SmoothScroll {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const smoothScroll = new SmoothScroll(0.019);
+  const smoothScroll = new SmoothScroll(0.0195);
 });
